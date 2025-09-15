@@ -1,0 +1,21 @@
+
+-sv
+-v93
+-debug
+-gui
+-delay_trigger
+-timescale 1ns/1ps
++bus_conflict_off
+-f ../sourcecode/dut_sfc_list.txt
+./sourcecode/tb/sm_tb.v
+
+# Optionally add a tcl script to run upon Xcelium invocation
+-input ../scripts/simulation.tcl
+
+# If you have Standard Cell instantiations, make sure to add this to your source list
+
+# If you have IOs, make sure to add this to your source list
+
+# If you have memories, add a preload option and behavioral models to your source list:
+#+MEMLOAD="PRELOAD"
+#<my_memories>.v

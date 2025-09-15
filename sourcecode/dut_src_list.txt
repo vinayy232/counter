@@ -1,0 +1,16 @@
+
+# If you have Standard Cell instantiations, make sure to add this to your source list
+# ../libraries/<SCL_library_name>/<SCL_library_name>.v
+
+# If you have IOs, make sure to add this to your source list
+# ../libraries/<IO_library_name>/<IO_library_name>.v
+
+# If you have memories, add the verilog behavioral model here and add
+# +MEMLOAD="PRELOAD"
+# ../libraries/<memory_model_name>/<memory_model_name>.v
+
+# List your RTL files here
+../sourcecode/rtl/sm.v
+
+# Put your testbench file inside the xrun_options script
+# ../sourcecode/tb/sm_tb.v
