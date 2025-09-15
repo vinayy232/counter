@@ -1,16 +1,15 @@
-
-module sm
-  #(parameter COUNTER_WIDTH = 4)
-  (input clk,
-   input rst_n,
-   input act,
-   input up_dwn_n,
-   output [COUNTER_WIDTH-1:0] count,
-   output ovflw);
-
+module sm #(parameter COUNTER_WIDTH = 4)(clk,rst_n,act,up_dwn_n,count,ovflw);
+  
+  
+  input clk;
+  input rst_n;
+  input act;
+  input up_dwn_n;
+  output [COUNTER_WIDTH-1:0] count;
+  output ovflw;  
   // Internal registers
   reg [COUNTER_WIDTH-1:0] count;
-  reg ovflw;
+  wire ovflw;
   reg [3:0] state, next_state;
 
   // State encoding
